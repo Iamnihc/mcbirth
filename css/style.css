@@ -152,12 +152,12 @@ body {
     #f0f,
     #f00
   );
-  background-size: 1000vh 1000vw;
+  background-size: 10000vh 10000vw;
 
-  -webkit-animation: rainbow 10s linear infinite;
-  -z-animation: rainbow 10s linear infinite;
-  -o-animation: rainbow 10s linear infinite;
-  animation: rainbow 10s linear infinite;
+  -webkit-animation: rainbow 100s linear infinite;
+  -z-animation: rainbow 100s linear infinite;
+  -o-animation: rainbow 100s linear infinite;
+  animation: rainbow 100s linear infinite;
 }
 
 @-webkit-keyframes rainbow {

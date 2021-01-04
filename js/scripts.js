@@ -52,5 +52,14 @@ function pickHat(tf) {
   addto.append(spinny);
   spinny.innerHTML = chosen;
 }
-
-document.
+var i = 0;
+clist = ["F00", "0F0", "FF0", "0FF", "00F", "F0F", "000"];
+function colorchange() {
+  document.getElementById("makeitrain").innerHTML =
+    "*{color:#" + clist[i + 1] + ";}";
+  i += 1;
+  i %= clist.length;
+}
+changeee = setInterval(() => {
+  colorchange();
+}, 500);
