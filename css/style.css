@@ -3,7 +3,7 @@
   max-height: 60vh;
 }
 #top {
-  height: 20vh;
+  height: 40vh;
   width: 100vw;
 }
 li {
@@ -11,6 +11,9 @@ li {
 }
 h2 {
   font-size: 200%;
+}
+p {
+  font-size: 300%;
 }
 * {
   text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff,
