@@ -37,21 +37,29 @@
     </ol>
     <p>Tap the first hat to learn what ingredients you MUST use, and the second hat to learn what you can not use</p>
     <div id=hats>
-        <img src="hat.png" class=hat id=yeshat onclick="pickHat(true); pickHat(true); tc= true;">
-        <img src="hat.png" class=hat id=nohat onclick="pickHat(false); fc=true;">
+
     </div>
-    <h2>
-        You MUST use:
-        <ul id=perm>
+    <div id="usedontuse">
 
-        </ul>
-    </h2>
-    <h2>
-        You can not use:
-        <ul id=bann>
+        <h2 class="wideboi">
+            <img src="hat.png" class=hat id=yeshat onclick="pickHat(true); pickHat(true); tc= true;">
+            <br>
+            You MUST use:
+            <ul id=perm>
 
-        </ul>
-    </h2>
+            </ul>
+        </h2>
+        <h2 class=wideboi>
+
+            <img src="hat.png" class=hat id=nohat onclick="pickHat(false); fc=true;">
+            <br>
+            You can not use:
+            <ul id=bann>
+
+            </ul>
+        </h2>
+    </div>
+
     <script src=" js/scripts.js"></script>
 </body>
 
