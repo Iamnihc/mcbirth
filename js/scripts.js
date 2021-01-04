@@ -52,3 +52,5 @@ function pickHat(tf) {
   addto.append(spinny);
   spinny.innerHTML = chosen;
 }
+
+document.
