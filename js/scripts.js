@@ -1,5 +1,5 @@
 var tc = false;
-var fc = true;
+var fc = false;
 var f = ["Pot", "Pan", "Spoon", "Spatula", "Bowl", "Plate", "Fork"];
 var t = [
   "Something starting with the letter e",
@@ -17,10 +17,10 @@ function pickHat(tf) {
   if (tf) {
     if (tc) {
       return;
-    } else {
-      tc = true;
     }
-    chosen = t[Math.floor(Math.random() * t.length)];
+    num = Math.floor(Math.random() * t.length);
+    chosen = t[num];
+    t.splice(num, 1);
     addto = document.getElementById("perm");
     extras = [
       t[Math.floor(Math.random() * t.length)],
@@ -33,11 +33,11 @@ function pickHat(tf) {
   } else {
     if (fc) {
       return;
-    } else {
-      fc = false;
     }
-    chosen = t[Math.floor(Math.random() * t.length)];
-    adto = document.getElementById("bann");
+    num = Math.floor(Math.random() * f.length);
+    f.splice(num, 1);
+    chosen = f[Math.floor(Math.random() * f.length)];
+    addto = document.getElementById("bann");
     extras = [
       f[Math.floor(Math.random() * f.length)],
       f[Math.floor(Math.random() * f.length)],
@@ -47,7 +47,8 @@ function pickHat(tf) {
       f[Math.floor(Math.random() * f.length)],
     ];
   }
-  spinny = document.createElement(li);
-  adto.append(spinny);
+  console.log("uhh");
+  spinny = document.createElement("li");
+  addto.append(spinny);
   spinny.innerHTML = chosen;
 }

@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <img src=mcbg.png id=top>
     <h1>Happy McBirth!</h1>
     <h2>In today’s McCarthychef cooking competition, you will get 90 minutes to make a stunning dinner entree… with a
         few
@@ -32,21 +33,19 @@
     </ol>
     <p>Tap the first hat to learn what ingredients you MUST use, and the second hat to learn what you can not use</p>
     <div id=hats>
-        <img src="hat.png" class=hat id=yeshat>
-        <img src="hat.png" class=hat id=nohat>
-    </div>
+        <img src="hat.png" class=hat id=yeshat onclick="pickHat(true); pickHat(true); tc= true;">
+        <img src="hat.png" class=hat id=nohat onclick="pickHat(false); fc=true;">
+        <h2>
+            <ul id=perm>
 
-    <h2 id="allowed" onclick="pickHat(true);">
-        <ul id=perm>
+            </ul>
+        </h2>
+        <h2>
+            <ul id=bann>
 
-        </ul>
-    </h2>
-    <h2 id=banned onclick="pickHat(false);">
-        <ul id=bann>
-
-        </ul>
-    </h2>
-    <script src="js/scripts.js"></script>
+            </ul>
+        </h2>
+        <script src=" js/scripts.js"></script>
 </body>
 
 </html>
