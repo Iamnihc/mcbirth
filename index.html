@@ -9,7 +9,7 @@
     <meta name="description" content="A challenging cookingthing">
     <meta name="author" content="Chinmai S">
 
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -24,12 +24,28 @@
             mandatory
             ingredients… draw a slip from the hat to get one ingredient you must (!!) use in your dish.</li>
         <li>The second Culinary Hat Expressing Fanciness contains potential forbidden tools… draw a slip to get one tool
-            that you
-            may not (!!) use in the preparation or serving of your dish.</li>
+            that you may not (!!) use in the preparation or serving of your dish.</li>
+        <li>You can't look stuff up (recipes, ingredients etc) but you can "phone a friend"</li>
         <li>Bonus points will be awarded for every lemon that you use in your dish.</li>
         <li>Name your dish something interesting!</li>
         <li>Your mom will try the food on stream at the end and give her critiques (dun dun dun)!!</li>
     </ol>
+    <p>Tap the first hat to learn what ingredients you MUST use, and the second hat to learn what you can not use</p>
+    <div id=hats>
+        <img src="hat.png" class=hat id=yeshat>
+        <img src="hat.png" class=hat id=nohat>
+    </div>
+
+    <h2 id="allowed" onclick="pickHat(true);">
+        <ul id=perm>
+
+        </ul>
+    </h2>
+    <h2 id=banned onclick="pickHat(false);">
+        <ul id=bann>
+
+        </ul>
+    </h2>
     <script src="js/scripts.js"></script>
 </body>
 
