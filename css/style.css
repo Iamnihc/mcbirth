@@ -4,9 +4,13 @@
 }
 #top {
   height: 20vh;
-  width: 100vh;
+  width: 100vw;
 }
 * {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin: 0px;
+  padding: 0px;
   font-family: cursive;
 
   background: linear-gradient(
@@ -23,10 +27,10 @@
   );
   background-size: 1800% 1800%;
 
-  -webkit-animation: rainbow 18s ease infinite;
-  -z-animation: rainbow 18s ease infinite;
-  -o-animation: rainbow 18s ease infinite;
-  animation: rainbow 18s ease infinite;
+  -webkit-animation: rainbow 6s ease infinite;
+  -z-animation: rainbow 6s ease infinite;
+  -o-animation: rainbow 6s ease infinite;
+  animation: rainbow 6s ease infinite;
 }
 
 @-webkit-keyframes rainbow {
