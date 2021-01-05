@@ -128,3 +128,10 @@ function colorchange() {
 changeee = setInterval(() => {
   colorchange();
 }, 1000);
+
+var left = 90 * 60;
+timer = setInterval(() => {
+  document.getElementById("timer").innerHTML =
+    Math.floor(left / 60) + "Minutes " + (left % 60) + "seconds";
+  left--;
+}, 1000);
