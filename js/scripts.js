@@ -1,21 +1,23 @@
-var tc = false;
+var tc = 0;
 var fc = false;
-var f = ["Pot", "Pan", "Spoon", "Spatula", "Bowl", "Plate", "Fork"];
-var t = [
-  "Something starting with the letter e",
-  "Something that’s orange",
-  "Something that grew underground",
-  "A plant native to asia",
-  "Something starting with the letter f",
-  "A food from the americas",
-  "A non-green vegetable",
-  "A non-brown spice",
-];
+var tea;
 function pickHat(tf) {
+  tea = tf;
+  var f = ["Pot", "Pan", "Spoon", "Spatula", "Bowl", "Plate", "Fork"];
+  var t = [
+    "Something starting with the letter e",
+    "Something that’s orange",
+    "Something that grew underground",
+    "A plant native to asia",
+    "Something starting with the letter f",
+    "A food from the americas",
+    "A non-green vegetable",
+    "A non-brown spice",
+  ];
   var addto;
   var chosen;
   if (tf) {
-    if (tc) {
+    if (tc >= 2) {
       return;
     }
     num = Math.floor(Math.random() * t.length);
@@ -29,6 +31,13 @@ function pickHat(tf) {
       t[Math.floor(Math.random() * t.length)],
       t[Math.floor(Math.random() * t.length)],
       t[Math.floor(Math.random() * t.length)],
+      t[Math.floor(Math.random() * t.length)],
+      t[Math.floor(Math.random() * t.length)],
+      t[Math.floor(Math.random() * t.length)],
+      t[Math.floor(Math.random() * t.length)],
+      t[Math.floor(Math.random() * t.length)],
+      t[Math.floor(Math.random() * t.length)],
+      chosen,
     ];
   } else {
     if (fc) {
@@ -45,13 +54,38 @@ function pickHat(tf) {
       f[Math.floor(Math.random() * f.length)],
       f[Math.floor(Math.random() * f.length)],
       f[Math.floor(Math.random() * f.length)],
+      f[Math.floor(Math.random() * f.length)],
+      f[Math.floor(Math.random() * f.length)],
+      f[Math.floor(Math.random() * f.length)],
+      f[Math.floor(Math.random() * f.length)],
+      f[Math.floor(Math.random() * f.length)],
+      f[Math.floor(Math.random() * f.length)],
+      chosen,
     ];
   }
   console.log("uhh");
   spinny = document.createElement("li");
   addto.append(spinny);
+
   spinny.innerHTML = chosen;
+  q = setTimeout(qq(), 2000 / extras.length);
 }
+function qq(tf) {
+  spinny.innerHTML = extras[0];
+  extras.shift();
+  console.log(extras.length);
+  if (extras.length <= 1) {
+    console.log("end");
+    clearInterval(q);
+    if (tea) {
+      tc += 1;
+      pickHat(true);
+    }
+  } else {
+    setTimeout(qq, 2000 / extras.length);
+  }
+}
+
 var i = 0;
 clist = [
   "000",
